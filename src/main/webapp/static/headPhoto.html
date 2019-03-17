@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>上传头像</title>
+    <link rel="stylesheet" th:href="${baseUrl+app_static+'/js/jquery/jcrop/css/jquery.Jcrop.min.css'}">
+    <script th:src="${baseUrl+app_static+'/js/jquery/jcrop/js/jquery.min.js'}"></script>
+    <script th:src="${baseUrl+app_static+'/js/jquery/jcrop/js/jquery.Jcrop.min.js'}"></script>
+   <style>
+        img {
+            border: 0px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .head {
+            width: 600px;
+            height: 500px;
+            background-color: gray;
+            padding: 3px;
+            border:3px solid #35baf6;
+            border-radius: 6px;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        #target{
+            max-width: 600px;
+            max-height: 600px;
+        }
+        .btn{
+            position: absolute;
+		    top: 230px;
+        	width: 100px; 
+			height: 40px;
+			border-width: 0px; 
+			border-radius: 3px;
+			background: #1E90FF;
+			cursor: pointer; 
+			outline: none;
+			font-family: Microsoft YaHei;
+			color: white;
+			font-size: 17px;
+        }
+        .btn:hover { 
+			background: #5599FF;
+        }
+        canvas {
+        	position: absolute;
+		    top: 10px;
+		    left: 630px;
+		    width: 200px;
+		    height: 200px;
+		    display: block;
+		  	z-index: 2000;
+		  	padding: 6px;
+		  	border: 1px rgba(0,0,0,.4) solid;
+		  	background-color: white;
+		  	-webkit-border-radius: 6px;
+		  	-moz-border-radius: 6px;
+		  	border-radius: 6px;
+		  	-webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+		  	-moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+		  	box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 头像 -->
+    <div class="head" >
+        <img src=""  id="target" alt="[Jcrop Example]" />
+        <input type="file" id="file" onchange="changeFile()" style="display: none;"/>
+    </div>
+    <!-- 画板 -->
+    <canvas id="myCan" width="200" height="200"></canvas>
+    <button class = "btn" style = "left:630px" onClick="openBrowse()">选择图片</button>
+    <button class = "btn" style = "left:735px" onClick="uploadFile()">确认</button>
+    <script type="text/javascript">
+
+        // 定义一些使用的变量
+        var     jcrop_api, //jcrop对象
+                boundx, //图片实际显示宽度
+                boundy, //图片实际显示高度
+                realWidth, // 真实图片宽度
+                realHeight, //真实图片高度
+                // 使用的jquery对象
+                $target = $('#target');
+
+        //1、打开浏览器
+        function openBrowse(){
+            var ie=navigator.appName=="Microsoft Internet Explorer" ? true : false; 
+            if(ie){ 
+                document.getElementById("file").click(); 
+            }else{
+                var a=document.createEvent("MouseEvents");
+                a.initEvent("click", true, true);  
+                document.getElementById("file").dispatchEvent(a);
+            } 
+        }
+
+        //2、从 file 域获取 本地图片 url 
+        function getFileUrl(sourceId) { 
+            var url; 
+            if (navigator.userAgent.indexOf("MSIE")>=1) { // IE 
+            url = document.getElementById(sourceId).value; 
+            } else if(navigator.userAgent.indexOf("Firefox")>0) { // Firefox 
+            url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0)); 
+            } else if(navigator.userAgent.indexOf("Chrome")>0) { // Chrome 
+            url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0)); 
+            } else if(navigator.userAgent.indexOf("Safari")>0) { // Chrome 
+            url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0)); 
+            } 
+            return url; 
+        } 
+        //选择文件事件
+        function changeFile() {
+            var url = getFileUrl("file");//根据id获取文件路径
+            preImg(url);
+            return false;
+        }
+
+        //3、将本地图片 显示到浏览器上 
+        function preImg(url) { 
+
+            console.log('url===' + url);
+            //图片裁剪逻辑
+            if(jcrop_api)//判断jcrop_api是否被初始化过
+            {
+                jcrop_api.destroy();
+            }
+
+            var image = document.getElementById('target');
+            image.onload=function(){//图片加载是一个异步的过程
+                    //获取图片文件真实宽度和大小
+                    var img = new Image();
+                    img.onload=function(){
+                        realWidth = img.width;
+                        realHeight = img.height;
+                        //获取图片真实高度之后
+                        initJcrop();//初始化Jcrop插件
+                        initCanvas();//初始化Canvas内容
+                    };
+                    img.src = url;
+            };
+            image.src = url;
+        } 
+
+        //初始化Jcrop插件
+        function initJcrop(){
+            $target.removeAttr("style");//清空上一次初始化设置的样式
+            $target.Jcrop({
+              onChange: updatePreview,
+              onSelect: updatePreview,
+              aspectRatio: 1
+            },function(){
+	            //初始化后回调函数
+	            // 获取图片实际显示的大小
+	            var bounds = this.getBounds();
+	            boundx = bounds[0];//图片实际显示宽度
+	            boundy = bounds[1];//图片实际显示高度
+	
+	            // 保存jcrop_api变量
+	            jcrop_api = this;
+            });  
+        }
+        //更新显示预览内容
+        function updatePreview(c){
+            if (parseInt(c.w) > 0)
+            {
+                //更新canvas画板内容
+                var img=document.getElementById("target");
+                var ct=document.getElementById("myCan");
+                var ctx=ct.getContext("2d");
+                //清空画板
+                ctx.clearRect(0,0, ct.width, ct.height); 
+                //.drawImage(图像对象,原图像截取的起始X坐标,原图像截取的起始Y坐标,原图像截取的宽度,原图像截取的高度，绘制图像的起始X坐标,绘制图像的起始Y坐标,绘制图像所需要的宽度,绘制图像所需要的高度);
+                ctx.drawImage(img, c.x/boundx * realWidth,c.y/boundy * realHeight, c.w/boundx * realWidth, c.h/boundy * realHeight,0,0, ct.width, ct.height);
+            }
+        }
+        //初始化canvas画板内容
+        function initCanvas(){
+            //更新canvas画板内容
+            var img= document.getElementById("target");
+            var ct= document.getElementById("myCan");
+            var ctx = ct.getContext("2d");
+           
+            var myCanWidth = $('#myCan').width();
+            var myCanHeight = $('#myCan').height();
+
+            //清空画板
+            ctx.clearRect(0,0, ct.width, ct.height); 
+
+             //.drawImage(图像对象,原图像截取的起始X坐标,原图像截取的起始Y坐标,原图像截取的宽度,原图像截取的高度，绘制图像的起始X坐标,绘制图像的起始Y坐标,绘制图像所需要的宽度,绘制图像所需要的高度);
+            var dWidth = realWidth;//绘制实际宽度
+            var dHeight = realHeight;//绘制实际高度
+            if(dWidth > myCanWidth)
+            {
+                dHeight = myCanWidth / dWidth *  dHeight;
+                dWidth = myCanWidth;
+            }
+            if(dHeight > myCanHeight)
+            {
+                dWidth = myCanHeight / dHeight * dWidth ;
+                dHeight = myCanHeight;
+            }
+            ctx.drawImage(img,0,0, realWidth, realHeight, 0,0,  dWidth, dHeight);
+        }
+
+        //文件上传
+        function uploadFile(){
+            //获取裁剪完后的base64图片url,转换为blob
+            var data=document.getElementById("myCan").toDataURL();
+            console.log(data);
+            var formData=new FormData();
+            console.log(dataURLtoBlob(data));
+            formData.append("imageName",dataURLtoBlob(data));
+            var httprequest= null;
+            if (window.XMLHttpRequest) {
+                httprequest = new XMLHttpRequest();
+            } else {
+                httprequest = new ActiveXObject('MicroSoft.XMLHTTP');
+            }
+            var apiurl= "/plat/upload"; //上传图片的api接口，自行填写
+            httprequest.open('POST',apiurl,true);
+            httprequest.send(formData);
+            httprequest.onreadystatechange= function () {
+                
+                if(httprequest.readyState == 4 ){
+                    
+                    if(httprequest.status == 200)
+                    {
+                        //var json=JSON.parse(httprequest.responseText);
+                        console.log(httprequest.responseText);
+                        
+                    }else
+                    {
+                        alert('获取数据错误,错误代码：' + httprequest.status + '错误信息：' + httprequest.statusText);
+                    }
+                }
+            };
+        }
+        
+        //把base64位的toDataURL图片转换成blob
+        function dataURLtoBlob(dataurl) {  
+            var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],  
+                    bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);  
+            while (n--) {  
+                u8arr[n] = bstr.charCodeAt(n);  
+            }  
+            return new Blob([u8arr], { type: mime });  
+        } 
+
+        window.onload = function () {
+            //初始化图片
+            preImg('static/resources/images/user-profile/mitul.jpg');
+        };
+
+    </script>
+</body>
+</html>

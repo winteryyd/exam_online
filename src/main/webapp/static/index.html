@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes">
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="${baseUrl+app_static+'/theme/'+theme+'/resources/Admin-all.css'}" />
+<script th:src="${baseUrl+app_static+'/js/extjs6.6/util.js'}"></script>
+<script th:src="${baseUrl+app_static+'/js/extjs6.6/ext-all.js'}"></script>
+<script th:inline="javascript">
+	const baseUrl = '[(${baseUrl})]',
+			  app = '[(${app_sys})]',
+		 app_name = '[(${app_name})]',
+	   app_static = '[(${app_static})]',
+		app_index = '[(${app_index})]',
+		app_login = '[(${app_login})]',
+	   app_logout = '[(${app_logout})]',
+	    app_reset = '[(${app_reset})]',
+	     app_user = '[(${app_user})]',
+	     sys_user = '[(${sys_user})]',
+	     sys_role = '[(${sys_role})]',
+	     sys_menu = '[(${sys_menu})]',
+	     sys_dict = '[(${sys_dict})]',
+	   background = '[(${background})]';
+	Ext.Loader.setConfig({
+		enabled : true
+	});
+	Ext.Loader.setPath('Ext.ux', app_static+'/js/extjs6.6/ux');
+	Ext.Loader.setPath('App', app_static+'/app');
+	Ext.onReady(function() {
+		Ext.QuickTips.init();
+		Ext.Ajax.request({
+			url : app_user,
+			method : 'POST',
+			success : function(result) {
+				var user=null;
+				if(result.responseText){
+					user = Ext.decode(result.responseText);
+				}
+				Ext.create('App.main.Main',{user:user}).show();
+			}
+		});
+	});
+</script>
+</head>
+<body>
+</body>
+</html>
