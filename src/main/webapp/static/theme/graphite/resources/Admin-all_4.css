@@ -1,0 +1,616 @@
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3081 */
+.x-keyboard-mode .x-btn-focus.x-btn-menu-active .x-btn-wizard-soft-green-small-mc,
+.x-keyboard-mode .x-btn-focus.x-btn-pressed .x-btn-wizard-soft-green-small-mc {
+    background-color: transparent;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3095 */
+.x-btn.x-btn-disabled .x-btn-wizard-soft-green-small-tl,
+.x-btn.x-btn-disabled .x-btn-wizard-soft-green-small-bl,
+.x-btn.x-btn-disabled .x-btn-wizard-soft-green-small-tr,
+.x-btn.x-btn-disabled .x-btn-wizard-soft-green-small-br,
+.x-btn.x-btn-disabled .x-btn-wizard-soft-green-small-tc,
+.x-btn.x-btn-disabled .x-btn-wizard-soft-green-small-bc {
+    background-image: url(images/btn/btn-wizard-soft-green-small-disabled-corners.gif);
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3103 */
+.x-btn.x-btn-disabled .x-btn-wizard-soft-green-small-ml,
+.x-btn.x-btn-disabled .x-btn-wizard-soft-green-small-mr {
+    background-image: url(images/btn/btn-wizard-soft-green-small-disabled-sides.gif);
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3107 */
+.x-btn.x-btn-disabled .x-btn-wizard-soft-green-small-mc {
+    background-color: transparent;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3117 */
+.x-nbr .x-btn-wizard-soft-green-small {
+    background-image: none;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3142 */
+.x-nbr .x-segmented-button-item-horizontal.x-btn-wizard-soft-green-small.x-segmented-button-first {
+    border-right-width: 0 !important;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3144 */
+.x-nbr .x-segmented-button-item-horizontal.x-btn-wizard-soft-green-small.x-segmented-button-first .x-btn-wizard-soft-green-small-mc {
+    padding-right: 16px !important;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3148 */
+.x-nbr .x-segmented-button-item-horizontal.x-btn-wizard-soft-green-small.x-segmented-button-middle {
+    border-right-width: 0 !important;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3150 */
+.x-nbr .x-segmented-button-item-horizontal.x-btn-wizard-soft-green-small.x-segmented-button-middle .x-btn-wizard-soft-green-small-mc {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3156 */
+.x-nbr .x-segmented-button-item-horizontal.x-btn-wizard-soft-green-small.x-segmented-button-last .x-btn-wizard-soft-green-small-mc {
+    padding-left: 16px !important;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3163 */
+.x-nbr .x-segmented-button-item-vertical.x-btn-wizard-soft-green-small.x-segmented-button-first {
+    border-bottom-width: 0 !important;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3165 */
+.x-nbr .x-segmented-button-item-vertical.x-btn-wizard-soft-green-small.x-segmented-button-first .x-btn-wizard-soft-green-small-mc {
+    padding-bottom: 10px !important;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3169 */
+.x-nbr .x-segmented-button-item-vertical.x-btn-wizard-soft-green-small.x-segmented-button-middle {
+    border-bottom-width: 0 !important;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3171 */
+.x-nbr .x-segmented-button-item-vertical.x-btn-wizard-soft-green-small.x-segmented-button-middle .x-btn-wizard-soft-green-small-mc {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3177 */
+.x-nbr .x-segmented-button-item-vertical.x-btn-wizard-soft-green-small.x-segmented-button-last .x-btn-wizard-soft-green-small-mc {
+    padding-top: 10px !important;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3183 */
+.x-nbr .x-segmented-button-item.x-btn-wizard-soft-green-small:after {
+    content: ' ';
+    border-style: solid;
+    border-width: 0;
+    position: absolute;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3201 */
+.x-nbr .x-segmented-button-item-horizontal.x-btn-wizard-soft-green-small:after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3207 */
+.x-nbr .x-segmented-button-item-horizontal.x-btn-wizard-soft-green-small.x-segmented-button-first:after {
+    left: 0;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3210 */
+.x-nbr .x-segmented-button-item-horizontal.x-btn-wizard-soft-green-small.x-segmented-button-last:after {
+    right: 0;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3216 */
+.x-nbr .x-segmented-button-item-vertical.x-btn-wizard-soft-green-small:after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3222 */
+.x-nbr .x-segmented-button-item-vertical.x-btn-wizard-soft-green-small.x-segmented-button-first:after {
+    top: 0;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3225 */
+.x-nbr .x-segmented-button-item-vertical.x-btn-wizard-soft-green-small.x-segmented-button-last:after {
+    bottom: 0;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3294 */
+.x-button-wizard-soft-green-small-cell > .x-grid-cell-inner {
+    padding-top: 8px;
+    padding-bottom: 7px;
+}
+/* D:/ExtJS/azkaban/ext/classic/theme-neutral/sass/var/button/Button.scss:3299 */
+.x-button-wizard-soft-green-small-cell > .x-grid-cell-inner >.x-btn-wizard-soft-green-small {
+    vertical-align: top;
+}
+/* D:/ExtJS/azkaban/classic/src/view/forms/Wizards.scss:43 */
+.x-btn-pressed .x-btn-icon-el-wizard-blue-small {
+    color: #579ddb;
+}
+/* D:/ExtJS/azkaban/classic/src/view/forms/Wizards.scss:48 */
+.x-btn-pressed.x-btn-disabled.x-btn-wizard-soft-purple-small,
+.x-btn-pressed.x-btn-disabled .x-btn-wizard-soft-purple-small-mc {
+    background-color: #925e8b;
+}
+/* D:/ExtJS/azkaban/classic/src/view/forms/Wizards.scss:54 */
+.x-btn-pressed .x-btn-icon-el-wizard-soft-purple-small {
+    color: #fff;
+}
+/* D:/ExtJS/azkaban/classic/src/view/forms/Wizards.scss:58 */
+.x-btn-pressed .x-btn-icon-el-wizard-soft-green-small {
+    color: #fff;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/BlankPage.scss:4 */
+.blank-page-container {
+    text-align: center;
+    color: #cacaca;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/BlankPage.scss:8 */
+.blank-page-container .fa-outer-class {
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    background-color: #ebebeb;
+    text-align: center;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/BlankPage.scss:16 */
+.blank-page-container .fa-outer-class .x-fa:before {
+    line-height: 150px;
+    font-size: 80px;
+    color: #cacaca;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/BlankPage.scss:23 */
+.blank-page-container h1 {
+    margin: 5px;
+    line-height: 30px;
+    font-weight: normal;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/Error404Window.scss:2 */
+.error-page-container .error-page-inner-container {
+    margin-top: -50px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/Error404Window.scss:6 */
+.error-page-container .x-window-body-default {
+    background-image: url('images/error-page-background.jpg');
+    background-size: cover;
+    color: #fff;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/Error404Window.scss:13 */
+.error-page-container.x-window-default {
+    border: none;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/Error404Window.scss:17 */
+.error-page-container .error-page-top-text {
+    font-size: 150px;
+    line-height: 150px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/Error404Window.scss:22 */
+.error-page-container .error-page-bottom-text {
+    font-size: 18px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/Error404Window.scss:26 */
+.error-page-container .error-page-desc {
+    line-height: 24px;
+    text-align: center;
+    font-size: 18px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/Error404Window.scss:31 */
+.error-page-container .error-page-desc a {
+    color: #35baf6;
+    text-decoration: none;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/Error404Window.scss:35 */
+.error-page-container .error-page-desc a:hover {
+    text-decoration: underline;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:10 */
+.pages-faq-container .x-header.x-panel-header-light {
+    border-bottom: 1px solid #ddd !important;
+    padding: 15px 16px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:14 */
+.pages-faq-container .x-header.x-panel-header-light .x-panel-header-title-light {
+    color: #fff;
+    font-size: 14px;
+    font-family: "Open Sans";
+    font-weight: Bold;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:22 */
+.pages-faq-container .x-header .x-fa {
+    line-height: 16px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:26 */
+.pages-faq-container .x-header .x-tool-after-title .x-tool-img {
+    display: none;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:31 */
+.pages-faq-container .x-accordion-body {
+    padding-left: 34px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:35 */
+.pages-faq-container .round-btn {
+    background-color: #35baf6;
+    border-color: #35baf6 !important;
+}
+/* D:/ExtJS/azkaban/classic/src/Application.scss:5 */
+.pages-faq-container .round-btn .x-btn-inner-default-toolbar-small {
+    color: #fff;
+}
+/* D:/ExtJS/azkaban/classic/src/Application.scss:9 */
+.pages-faq-container .round-btn:hover {
+    background-color: transparent;
+}
+/* D:/ExtJS/azkaban/classic/src/Application.scss:12 */
+.pages-faq-container .round-btn:hover .x-btn-inner-default-toolbar-small,
+.pages-faq-container .round-btn:hover .x-btn-inner-default-small {
+    color: #35baf6;
+}
+/* D:/ExtJS/azkaban/classic/src/Application.scss:17 */
+.pages-faq-container .round-btn:hover .x-btn-icon-el-default-small,
+.pages-faq-container .round-btn:hover .x-btn-icon-el-default-toolbar-small {
+    color: #35baf6;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:40 */
+.pages-faq-container .x-accordion-hd .x-title-icon {
+    color: #fff !important;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:44 */
+.pages-faq-container .x-accordion-hd.x-collapsed .x-title-icon:before {
+    content: "\f0da" !important;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:51 */
+.faq-left-sidebar .x-fa {
+    font-size: 16px;
+    margin-right: 10px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:56 */
+.faq-left-sidebar .faq-tips-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:61 */
+.faq-left-sidebar .faq-tips-list li {
+    margin: 15px 0;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:64 */
+.faq-left-sidebar .faq-tips-list li:before {
+    font-family: FontAwesome;
+    content: "\f111";
+    padding-right: 10px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:70 */
+.faq-left-sidebar .faq-tips-list li.pointone:before {
+    color: #56b650;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:74 */
+.faq-left-sidebar .faq-tips-list li.pointtwo:before {
+    color: #ffc037;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:78 */
+.faq-left-sidebar .faq-tips-list li.pointthree:before {
+    color: #e55149;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:82 */
+.faq-left-sidebar .faq-tips-list li.pointfour:before {
+    color: #a97fe3;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:88 */
+.faq-left-sidebar .borderCls {
+    border-bottom: 1px solid #ddd;
+}
+/* D:/ExtJS/azkaban/classic/src/view/pages/FAQ.scss:93 */
+.FAQPanel .x-title-text-default {
+    font-size: 16px;
+    font-weight: normal;
+}
+/* D:/ExtJS/azkaban/classic/src/view/search/Results.scss:2 */
+.allRecordsCls .x-grid-cell-inner {
+    padding: 15px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/search/Results.scss:5 */
+.allRecordsCls .x-grid-cell-inner div {
+    white-space: normal;
+}
+/* D:/ExtJS/azkaban/classic/src/view/search/Results.scss:9 */
+.allRecordsCls .x-grid-cell-inner .resultsTitleCls {
+    font-size: 14px;
+    color: #333;
+}
+/* D:/ExtJS/azkaban/classic/src/view/search/Results.scss:14 */
+.allRecordsCls .x-grid-cell-inner .resultsUrlCls a {
+    color: #35baf6;
+    text-decoration: none;
+}
+/* D:/ExtJS/azkaban/classic/src/view/search/Results.scss:18 */
+.allRecordsCls .x-grid-cell-inner .resultsUrlCls a:hover {
+    text-decoration: underline;
+}
+/* D:/ExtJS/azkaban/classic/src/view/search/Results.scss:23 */
+.allRecordsCls .x-grid-cell-inner .imageRowCls img {
+    margin-right: 15px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/search/Results.scss:30 */
+.user-grid .x-grid-td {
+    vertical-align: middle;
+}
+/* D:/ExtJS/azkaban/classic/src/view/search/Results.scss:33 */
+.user-grid .x-grid-td img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+/* D:/ExtJS/azkaban/classic/src/view/search/Results.scss:38 */
+.user-grid .x-grid-body {
+    border-width: 1px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/search/Results.scss:42 */
+.x-action-col-icon {
+    font-size: 13px !important;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:14 */
+.widget-top-first-container {
+    background-color: #468fd3;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:18 */
+.widget-bottom-first-container {
+    background-color: #fff;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:22 */
+.postion-class {
+    position: relative;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:26 */
+.widget-name-text {
+    font-family: "Open Sans";
+    font-weight: Bold;
+    font-size: 16px;
+    line-height: 16px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:34 */
+.widget-tool-button .widget-follow-button,
+.widget-tool-button .widget-follow-button .x-frame-mc {
+    background-color: #82c748;
+    border-color: #82c748 !important;
+}
+/* D:/ExtJS/azkaban/classic/src/Application.scss:5 */
+.widget-tool-button .widget-follow-button .x-btn-inner-default-toolbar-small,
+.widget-tool-button .widget-follow-button .x-frame-mc .x-btn-inner-default-toolbar-small {
+    color: #fff;
+}
+/* D:/ExtJS/azkaban/classic/src/Application.scss:9 */
+.widget-tool-button .widget-follow-button:hover,
+.widget-tool-button .widget-follow-button .x-frame-mc:hover {
+    background-color: transparent;
+}
+/* D:/ExtJS/azkaban/classic/src/Application.scss:12 */
+.widget-tool-button .widget-follow-button:hover .x-btn-inner-default-toolbar-small,
+.widget-tool-button .widget-follow-button:hover .x-btn-inner-default-small,
+.widget-tool-button .widget-follow-button .x-frame-mc:hover .x-btn-inner-default-toolbar-small,
+.widget-tool-button .widget-follow-button .x-frame-mc:hover .x-btn-inner-default-small {
+    color: #82c748;
+}
+/* D:/ExtJS/azkaban/classic/src/Application.scss:17 */
+.widget-tool-button .widget-follow-button:hover .x-btn-icon-el-default-small,
+.widget-tool-button .widget-follow-button:hover .x-btn-icon-el-default-toolbar-small,
+.widget-tool-button .widget-follow-button .x-frame-mc:hover .x-btn-icon-el-default-small,
+.widget-tool-button .widget-follow-button .x-frame-mc:hover .x-btn-icon-el-default-toolbar-small {
+    color: #82c748;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:39 */
+.widget-tool-button .widget-message-button,
+.widget-tool-button .widget-message-button .x-frame-mc {
+    background-color: #35baf6;
+    border-color: #35baf6 !important;
+}
+/* D:/ExtJS/azkaban/classic/src/Application.scss:5 */
+.widget-tool-button .widget-message-button .x-btn-inner-default-toolbar-small,
+.widget-tool-button .widget-message-button .x-frame-mc .x-btn-inner-default-toolbar-small {
+    color: #fff;
+}
+/* D:/ExtJS/azkaban/classic/src/Application.scss:9 */
+.widget-tool-button .widget-message-button:hover,
+.widget-tool-button .widget-message-button .x-frame-mc:hover {
+    background-color: transparent;
+}
+/* D:/ExtJS/azkaban/classic/src/Application.scss:12 */
+.widget-tool-button .widget-message-button:hover .x-btn-inner-default-toolbar-small,
+.widget-tool-button .widget-message-button:hover .x-btn-inner-default-small,
+.widget-tool-button .widget-message-button .x-frame-mc:hover .x-btn-inner-default-toolbar-small,
+.widget-tool-button .widget-message-button .x-frame-mc:hover .x-btn-inner-default-small {
+    color: #35baf6;
+}
+/* D:/ExtJS/azkaban/classic/src/Application.scss:17 */
+.widget-tool-button .widget-message-button:hover .x-btn-icon-el-default-small,
+.widget-tool-button .widget-message-button:hover .x-btn-icon-el-default-toolbar-small,
+.widget-tool-button .widget-message-button .x-frame-mc:hover .x-btn-icon-el-default-small,
+.widget-tool-button .widget-message-button .x-frame-mc:hover .x-btn-icon-el-default-toolbar-small {
+    color: #35baf6;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:44 */
+.widget-tool-button .x-btn-inner-default-toolbar-small {
+    color: #fff;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:49 */
+.widget-top-container-first-img {
+    position: absolute;
+    z-index: 200;
+    margin-top: 94px;
+    border: 3px solid #fff;
+    -webkit-border-radius: 36px;
+    -moz-border-radius: 36px;
+    -ms-border-radius: 36px;
+    border-radius: 36px;
+    left: 50%;
+    margin-left: -33px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:59 */
+.widget-top-second-container {
+    background-color: #8dc153;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:63 */
+.widget-top-first-third-container {
+    background-color: #607d8b;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:67 */
+.widget-top-first-fourth-container {
+    background: url('images/img2.jpg');
+    background-size: 100% auto;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:72 */
+.widget-top-second-panel .x-fa {
+    color: #fff;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:76 */
+.widget-follower-toolbar {
+    background-color: #fafafa;
+    font-size: 12px;
+    padding: 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:84 */
+.widget-follower-toolbar .x-form-display-field {
+    font-size: 13px;
+    color: #333;
+    font-family: "Open Sans";
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:90 */
+.widget-follower-toolbar .x-form-display-field .label {
+    color: #fff;
+    font-size: 12px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:95 */
+.widget-follower-toolbar .widget-follower-tool-label {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:101 */
+.info-card-item {
+    text-align: center;
+    background: #fff;
+    padding: 45px 10px !important;
+    font-size: 24px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:108 */
+.info-card-item.info-card-large-wrap h2 {
+    font-size: 48px;
+    line-height: 48px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:113 */
+.info-card-item.info-card-large-wrap span.x-fa {
+    height: 75px;
+    width: 75px;
+    border-radius: 38px;
+    color: #fff;
+    font-size: 30px;
+    line-height: 75px;
+    margin: 15px 0;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:122 */
+.info-card-item.info-card-large-wrap span.x-fa.fa-shopping-cart {
+    background-color: #458fd2;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:126 */
+.info-card-item.info-card-large-wrap span.x-fa.fa-envelope {
+    background-color: #4caf50;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:130 */
+.info-card-item.info-card-large-wrap span.x-fa.fa-code {
+    background-color: #9c27b0;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:134 */
+.info-card-item.info-card-large-wrap span.x-fa.fa-file-text {
+    background-color: #e91e63;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:139 */
+.info-card-item.info-card-large-wrap .infodiv {
+    font-size: 14px;
+    line-height: 16px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:145 */
+.info-card-item.cornflower-blue:before {
+    background: #458fd2;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:149 */
+.info-card-item.green:before {
+    background: #4caf50;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:153 */
+.info-card-item.magenta:before {
+    background: #9c27b0;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:157 */
+.info-card-item.pink:before {
+    background: #e91e63;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:161 */
+.info-card-item.orange:before {
+    background: #ffc107;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:165 */
+.info-card-item.blue:before {
+    background: #673ab7;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:169 */
+.info-card-item h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0;
+    margin: 0;
+    line-height: 32px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:177 */
+.info-card-item div {
+    line-height: 24px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:181 */
+.info-card-item span {
+    font-size: 24px;
+    line-height: 24px;
+}
+/* D:/ExtJS/azkaban/classic/src/view/widgets/Widgets.scss:187 */
+.info-card-item:before {
+    width: 100%;
+    position: absolute;
+    height: 3px;
+    content: "";
+    top: 0;
+    left: 0;
+}
+/* D:/ExtJS/azkaban/sass/src/view/main/Main.scss:1 */
+.nav-tree-badge:after {
+    position: absolute;
+    height: 18px;
+    width: 3.3em;
+    display: inline-block;
+    text-align: center;
+    top: 50%;
+    margin-top: -9px;
+    right: 12px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 18px;
+}
+/* D:/ExtJS/azkaban/sass/src/view/main/Main.scss:16 */
+.nav-tree-badge-hot:after {
+    content: "HOT";
+    background-color: #e3495a;
+}
+/* D:/ExtJS/azkaban/sass/src/view/main/Main.scss:21 */
+.nav-tree-badge-new:after {
+    content: "NEW";
+    background-color: #2eadf5;
+}
+/* D:/ExtJS/azkaban/sass/src/view/main/Main.scss:30 */
+.circular {
+    border-radius: 50%;
+}
+/* D:/ExtJS/azkaban/sass/src/view/main/Main.scss:35 */
+.x-fa.fa-google-plus {
+    min-width: 16px;
+    width: auto;
+}
+/* D:/ExtJS/azkaban/sass/src/Application.scss:3 */
+body.x-ios.x-webview.x-portrait {
+    margin-top: 20px;
+}
+/* D:/ExtJS/azkaban/sass/src/view/search/Results.scss:1 */
+.search-result-attachment {
+    width: 160px;
+    height: 100px;
+}
