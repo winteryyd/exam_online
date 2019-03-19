@@ -102,7 +102,7 @@ CREATE TABLE `sys_user` (
 
 /*Data for the table `sys_user` */
 
-insert  into `sys_user`(`empid`,`username`,`department`,`phone`,`password`,`active`) values ('1232','闫要冬(闫冬)','大数据中心','18321751160','202cb962ac59075b964b07152d234b70',1);
+insert  into `sys_user`(`empid`,`username`,`department`,`phone`,`password`,`active`) values ('1232','闫冬','大数据中心','18321751160','202cb962ac59075b964b07152d234b70',1),('2016092016','贝贝','化工','2016092016','e10adc3949ba59abbe56e057f20f883e',1);
 
 /*Table structure for table `sys_user_role` */
 
@@ -114,7 +114,7 @@ CREATE TABLE `sys_user_role` (
 
 /*Data for the table `sys_user_role` */
 
-insert  into `sys_user_role`(`role_id`,`empid`) values (1,'1232'),(2,'1232');
+insert  into `sys_user_role`(`role_id`,`empid`) values (1,'1232'),(1,'2016092016'),(2,'1232');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
