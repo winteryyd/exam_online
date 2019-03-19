@@ -30,6 +30,7 @@ Ext.define('App.plat.DictManager', {
 	store : Ext.create('App.plat.DictManagerStore'),
 	title: '词典管理',
 	forceFit : true,
+	selType: 'checkboxmodel',
 	columns : [ {
 		text : "词典类型",
 		dataIndex : 'dictType'
@@ -97,18 +98,14 @@ Ext.define('App.plat.DictManager', {
 			iconCls : 'x-fa fa-times',
 			handler : function() {
 				var dictManager = this.ownerCt.ownerCt;
-        		var selModel = dictManager.getSelectionModel();
-                if(!selModel.hasSelection()){
-                 	Ext.toast("请选中要删除的信息！", "提示信息", 'tr');
-                 	return;
-                }
-                var selectedItem=selModel.getSelection()[0];
+                var dictIds=getSelection(this,'dictId');
+                if(!dictIds) return;
                 Ext.MessageBox.confirm('提示', '确定要删除所选的记录？', function(btn) {
 					if (btn == "yes") {
 						Ext.Ajax.request({
 							url : sys_dict+"/delete",
 							method : 'POST',
-							params : { dictId: selectedItem.get('dictId') },
+							params : { dictIds: dictIds },
 							success : function(result) {
 								if (Ext.decode(result.responseText).success) {
 									dictManager.getStore().load();

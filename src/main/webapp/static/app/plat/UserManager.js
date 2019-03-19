@@ -20,33 +20,19 @@ Ext.define('App.plat.UserManager', {
 	store : Ext.create('App.plat.UserManagerStore'),
 	title: '用户管理',
 	forceFit : true,
+	selType: 'checkboxmodel',
 	columns : [ {
-		text : "工号",
-		dataIndex : 'empid',
-		width:60	
+		text : "学号",
+		dataIndex : 'empid'
 	}, {
 		text : "姓名",
-		dataIndex : 'username',
-		width:70
+		dataIndex : 'username'
 	}, {
-		text : "部门",
+		text : "班级",
 		dataIndex : 'department'
-	}, {
-		text : "岗位",
-		dataIndex : 'title'
-	}, {
-		text : "电话",
-		dataIndex : 'phone',
-		width:70
-	}, {
-		text : "邮箱",
-		dataIndex : 'email'
-	}, {
-		text : "hive用户",
-		dataIndex : 'hivename'
 	},{
-		text : "任务队列",
-		dataIndex : 'jobqueue'
+		text : "电话",
+		dataIndex : 'phone'
 	},{
 		text : "状态",
 		dataIndex : 'active',
@@ -106,15 +92,16 @@ Ext.define('App.plat.UserManager', {
 			text : '删除',
 			iconCls : 'x-fa fa-times',
 			handler : function() {
-				var selectedItem=getSelection(this);
-                if(!selectedItem) return;
-                var userManager = this.ownerCt.ownerCt;
+				
+				var userManager = this.ownerCt.ownerCt;
+				var empids=getSelection(this,'empid');
+				if(!empids) return;
                 Ext.MessageBox.confirm('提示', '确定要删除所选的记录？', function(btn) {
 					if (btn == "yes") {
 						Ext.Ajax.request({
 							url : sys_user+"/delete",
 							method : 'POST',
-							params : { empid: selectedItem.get("empid") },
+							params : { empids: empids },
 							success : function(result) {
 								if (Ext.decode(result.responseText).success) {
 									userManager.getStore().load();

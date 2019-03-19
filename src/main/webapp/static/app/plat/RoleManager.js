@@ -20,6 +20,7 @@ Ext.define('App.plat.RoleManager', {
 	store : Ext.create('App.plat.RoleManagerStore'),
 	title: '角色管理',
 	forceFit : true,
+	selType: 'checkboxmodel',
 	columns : [ {
 		text : "角色名称",
 		dataIndex : 'enRoleName'
@@ -69,15 +70,15 @@ Ext.define('App.plat.RoleManager', {
 			text : '删除',
 			iconCls : 'x-fa fa-times',
 			handler : function() {
-				var selectedItem=getSelection(this);
-                if(!selectedItem) return;
-                var roleManager = this.ownerCt.ownerCt;
+				var roleManager = this.ownerCt.ownerCt;
+				var roleIds=getSelection(this,'roleId');
+                if(!roleIds) return;
                 Ext.MessageBox.confirm('提示', '确定要删除所选的记录？', function(btn) {
 					if (btn == "yes") {
 						Ext.Ajax.request({
 							url : sys_role+"/delete",
 							method : 'POST',
-							params : { roleId: selectedItem.data.roleId },
+							params : { roleIds : roleIds},
 							success : function(result) {
 								if (Ext.decode(result.responseText).success) {
 									roleManager.getStore().load();
