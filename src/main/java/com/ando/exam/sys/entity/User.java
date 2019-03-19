@@ -34,12 +34,8 @@ public class User implements Serializable {
 	private String username;
 	@Column(length=128)
 	private String department;
-	@Column(length=64)
-	private String title;
 	@Column(length=32)
 	private String phone;
-	@Column(length=128)
-	private String email;
 	@Column(length=64)
 	private String password;
 	@Column(length=4)
