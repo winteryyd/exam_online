@@ -5,7 +5,7 @@ Ext.define('App.main.MainController', {
     requires: [
         'App.dashboard.Dashboard',
         'App.plat.Plat',
-        'App.scheduler.Scheduler',
+        'App.exam.Exam',
         'App.page.Page404',
         'App.page.Card404',
         'App.page.LockScreen',
