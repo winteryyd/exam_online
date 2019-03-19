@@ -44,10 +44,6 @@ public class User implements Serializable {
 	private String password;
 	@Column(length=4)
 	private int active;
-	@Column(length=32)
-	private String hivename;
-	@Column(length=64)
-	private String jobqueue;
 	@Transient
 	private boolean auth=false;
 	

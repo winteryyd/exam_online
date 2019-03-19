@@ -2,6 +2,7 @@ package com.ando.exam.sys.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,9 +34,14 @@ public class RoleController extends BaseController {
 	}
 	
 	@RequestMapping("/delete")
-	public Object delete(Long roleId) {
+	public Object delete(String roleIds) {
 		try {
-			roleService.delete(roleId);
+			String[] roleIdsArr = roleIds.trim().split(",");
+			for(String roleId:roleIdsArr){
+				if(!StringUtils.isEmpty(roleId)) {
+					roleService.delete(Long.valueOf(roleId));
+				}
+			}
 			return this.returnSuccess();
 		} catch (Exception e) {
 			return this.returnError(e);

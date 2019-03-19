@@ -2,6 +2,7 @@ package com.ando.exam.sys.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import com.ando.exam.base.BaseController;
 import com.ando.exam.base.BasePage;
 import com.ando.exam.sys.config.Constant;
 import com.ando.exam.sys.entity.Role;
+import com.ando.exam.sys.entity.RoleUser;
 import com.ando.exam.sys.entity.User;
 import com.ando.exam.sys.service.UserService;
 
@@ -32,9 +34,14 @@ public class UserController extends BaseController {
 	}
 	
 	@RequestMapping("/delete")
-	public Object delete(String empid) {
+	public Object delete(String empids) {
 		try {
-			userService.delete(empid);
+			String[] empidsArr = empids.trim().split(",");
+			for(String empid:empidsArr){
+				if(!StringUtils.isEmpty(empid)) {
+					userService.delete(empid);
+				}
+			}
 			return this.returnSuccess();
 		} catch (Exception e) {
 			return this.returnError(e);

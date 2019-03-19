@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,9 +33,14 @@ public class DictController extends BaseController {
 	}
 	
 	@RequestMapping("/delete")
-	public Object delete(Long dictId) {
+	public Object delete(String dictIds) {
 		try {
-			dictService.delete(dictId);
+			String[] dictIdsArr = dictIds.trim().split(",");
+			for(String dictId:dictIdsArr){
+				if(!StringUtils.isEmpty(dictId)) {
+					dictService.delete(Long.valueOf(dictId));
+				}
+			}
 			return this.returnSuccess();
 		} catch (Exception e) {
 			return this.returnError(e);
