@@ -44,7 +44,7 @@ Ext.define('App.page.Login', {
                     height: 55,
                     hideLabel: true,
                     allowBlank : false,
-                    emptyText: '工号',
+                    emptyText: '学号',
                     triggers: {
                         glyphed: {
                             cls: 'trigger-glyph-noop auth-email-trigger'
@@ -81,7 +81,7 @@ Ext.define('App.page.Login', {
                         },
                         {
                             xtype: 'box',
-                            html: '<a href="#passwordreset" class="link-forgot-password"> Forgot Password ?</a>'
+                            html: '<a href="#" class="link-forgot-password"> Forgot Password ?</a>'
                         }
                     ]
                 },
