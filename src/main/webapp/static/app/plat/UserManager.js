@@ -137,7 +137,7 @@ Ext.define('App.plat.UserManager', {
  */
 Ext.define('App.plat.UserManagerForm', {
 	extend : 'Ext.window.Window',
-	height : 500,
+	height : 400,
 	width : 400,
 	layout : 'fit',
 	resizable : false,
@@ -191,7 +191,7 @@ Ext.define('App.plat.UserManagerForm', {
 		},{
 			xtype: 'textfield',
 			anchor : '100%',
-			fieldLabel : '工号',
+			fieldLabel : '学号',
 			name : 'empid',
 			labelWidth : 60,
 			allowBlank : false,
@@ -207,52 +207,15 @@ Ext.define('App.plat.UserManagerForm', {
 		}, {
 			xtype: 'textfield',
 			anchor : '100%',
-			fieldLabel : '部门',
+			fieldLabel : '班级',
 			name : 'department',
-			labelWidth : 60
-		}, {
-			xtype: 'textfield',
-			anchor : '100%',
-			fieldLabel : '岗位',
-			name : 'title',
 			labelWidth : 60
 		}, {
 			xtype: 'textfield',
 			anchor : '100%',
 			fieldLabel : '电话',
 			name : 'phone',
-			labelWidth : 60,
-			regex : /^[1]\d{10,10}/, //正则表达式在 
-			regexText:"手机号无效！", //正则表达式错误提示
-			allowBlank : false,
-			maxLength: 11,
-			afterLabelTextTpl : '<span style="color:red">*</span>'
-		}, {
-			xtype: 'textfield',
-			anchor : '100%',
-			fieldLabel : '邮箱',
-			name : 'email',
-			vtype       : "email",//email格式验证  
-	        vtypeText   : "邮箱无效！",//错误提示信息
-			labelWidth : 60,
-			allowBlank : false,
-			afterLabelTextTpl : '<span style="color:red">*</span>'
-		}, {
-			xtype: 'textfield',
-			anchor : '100%',
-			fieldLabel : 'hive用户',
-			name : 'hivename',
 			labelWidth : 60
-		},{
-			fieldLabel : '队列',
-			labelWidth : 60,
-			name : 'jobqueue',
-			anchor : '100%',
-			xtype : 'combo',
-			editable : false,
-			store : Ext.create('App.main.DictStore',{dictType:'jobqueue'}),
-			displayField : 'dictLabel',
-			valueField : 'dictValue'
 		},
 		{
 			fieldLabel : '状态',
@@ -264,6 +227,12 @@ Ext.define('App.plat.UserManagerForm', {
 			store : Ext.create('App.main.DictStore',{dictType:'active'}),
 			displayField : 'dictLabel',
 			valueField : 'dictValue'
+		},{
+			xtype: 'component',
+            html: '初始密码:123456',
+            style: {
+                'margin-top': '50px'
+            }
 		}]
 	},
 	listeners : {
